@@ -36,6 +36,34 @@ jobs:
         action: 'upload sources'
 ```
 
+## Supported options
+The default action is to upload sources. Though, you can set different actions through the “with” options. If you don't want to upload your sources to Crowdin, just update the `action` option.
+
+```yaml
+- name: crowdin action
+  with:
+    # Define command action ('delbranch', 'download', 'upload sources', 'upload translations', 'sync').
+    action: 'upload sources'
+    
+    # Crowdin configuration file path [crowdin.yml]
+    config: './crowdin.yml'
+
+    # Crowdin branch to use with command (defaults to current git branch).
+    #   Note this is required when you use action 'delbranch'
+    branch: '<branch-name>'
+    
+    # Do not execute write operations on crowdin
+    dry_run: true
+
+    # Make "base_path" property relative to config file path
+    relative_path: true
+
+    # Print script-aware outputs (no colors, no human friendly info)
+    porcelain: true
+```
+
+For more detailed descriptions of these options, see [`action.yml`](https://github.com/ardeois/better-crowdin-action/blob/master/action.yml).
+
 ## Contributing
 
 We are happy to accept contributions. To contribute please do the following:

@@ -6,8 +6,11 @@ inputs:
     description: Action to run ('delbranch', 'download', 'upload sources', 'upload translations', 'sync')
     required: false
     default: 'upload sources'
+  config:
+    description: Crowdin configuration file path [crowdin.yml]
+    required: false
   branch:
-    description: Crowdin branch to use with command (defaults to current git branch). Note this is required when you use action 'delbranch')
+    description: Crowdin branch to use with command (defaults to current git branch). Note this is required when you use action 'delbranch'
     required: false
   dry_run:
     description: Do not execute write operations on crowdin
