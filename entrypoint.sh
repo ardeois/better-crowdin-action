@@ -31,6 +31,7 @@ echo "STARTING BETTER-CROWDIN ACTION";
 
 OPTIONS=$( init_options );
 
-echo better-crowdin $INPUT_ACTION $OPTIONS
-better-crowdin $INPUT_ACTION $OPTIONS
+echo "better-crowdin $INPUT_ACTION $OPTIONS || $INPUT_IGNORE_ERRORS"
+
+better-crowdin $INPUT_ACTION $OPTIONS || $INPUT_IGNORE_ERRORS
 

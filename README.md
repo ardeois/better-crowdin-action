@@ -49,7 +49,7 @@ The default action is to upload sources. Though, you can set different actions t
     config: './crowdin.yml'
 
     # Crowdin branch to use with command (defaults to current git branch).
-    #   Note this is required when you use action 'delbranch'
+    #   Note this is required when you use action 'delbranch', use `branch: ${{ github.ref }}`
     branch: '<branch-name>'
     
     # Do not execute write operations on crowdin
@@ -60,6 +60,9 @@ The default action is to upload sources. Though, you can set different actions t
 
     # Print script-aware outputs (no colors, no human friendly info)
     porcelain: true
+
+    # Ignore any script error. This could be useful for `delbranch` in case the branch does not exists
+    ignore_errors: true
 ```
 
 For more detailed descriptions of these options, see [`action.yml`](https://github.com/ardeois/better-crowdin-action/blob/master/action.yml).

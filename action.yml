@@ -24,6 +24,10 @@ inputs:
     description: Print script-aware outputs (no colors, no human friendly info)
     required: false
     default: 'false'
+  ignore_errors:
+    description: Ignore any script error. This could be useful for `delbranch` in case the branch does not exists
+    required: false
+    default: 'false'
 
 runs:
   using: 'docker'
