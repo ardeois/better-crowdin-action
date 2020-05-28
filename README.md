@@ -31,7 +31,7 @@ jobs:
       uses: actions/checkout@v2
 
     - name: crowdin action
-      uses: ardeois/better-crowdin-action@latest
+      uses: ardeois/better-crowdin-action@v1.0
       with:
         action: 'upload sources'
 ```
