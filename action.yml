@@ -9,11 +9,11 @@ inputs:
   branch:
     description: Crowdin branch to use with command (defaults to current git branch). Note this is required when you use action 'delbranch')
     required: false
-  dry-run:
+  dry_run:
     description: Do not execute write operations on crowdin
     required: false
     default: 'false'
-  relative-path:
+  relative_path:
     description: Make "base_path" property relative to config file path
     required: false
     default: 'false'
