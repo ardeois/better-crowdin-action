@@ -10,8 +10,9 @@ inputs:
     description: Crowdin configuration file path [crowdin.yml]
     required: false
   branch:
-    description: Crowdin branch to use with command (defaults to current git branch). Note this is required when you use action 'delbranch'
+    description: Crowdin branch to use with command (defaults to current ref from github event `github.event.ref`).
     required: false
+    default: ${{github.event.ref}}
   dry_run:
     description: Do not execute write operations on crowdin
     required: false
@@ -35,5 +36,5 @@ runs:
   args:
     - ${{ inputs.files }}
 branding:
-  icon: circle
-  color: purple
+  icon: refresh-cw
+  color: blue

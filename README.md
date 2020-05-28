@@ -48,8 +48,7 @@ The default action is to upload sources. Though, you can set different actions t
     # Crowdin configuration file path [crowdin.yml]
     config: './crowdin.yml'
 
-    # Crowdin branch to use with command (defaults to current git branch).
-    #   Note this is required when you use action 'delbranch', use `branch: ${{ github.ref }}`
+    #  Crowdin branch to use with command (defaults to current ref from `github.ref` without `refs/heads/` prefix).
     branch: '<branch-name>'
     
     # Do not execute write operations on crowdin
