@@ -8,6 +8,7 @@ init_options() {
   fi
 
   if [[ -n "$INPUT_BRANCH" ]]; then
+    INPUT_BRANCH=$(echo $INPUT_BRANCH | sed "s/^refs\/heads\///")
     OPTIONS="${OPTIONS} --branch=${INPUT_BRANCH}"
   fi
 
